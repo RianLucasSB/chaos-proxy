@@ -52,12 +52,13 @@ public class ProxyHandler {
                 .uri(targetUrl)
                 .headers(headers -> headers.addAll(request.headers().asHttpHeaders()))
                 .body(request.bodyToMono(byte[].class), byte[].class)
-                .exchangeToMono(clientResponse ->
-                        ServerResponse
-                                .status(clientResponse.statusCode())
-                                .headers(h -> h.addAll(clientResponse.headers().asHttpHeaders()))
-                                .body(clientResponse.bodyToMono(byte[].class), byte[].class)
+                .exchangeToMono(clientResponse -> clientResponse.bodyToMono(byte[].class)
+                                                                .flatMap(body -> ServerResponse
+                                                                        .status(clientResponse.statusCode())
+                                                                        .headers(h -> h.addAll(clientResponse.headers().asHttpHeaders()))
+                                                                        .bodyValue(body)
+                                                                )
                 );
-
     }
+
 }

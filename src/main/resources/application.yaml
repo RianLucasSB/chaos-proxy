@@ -1,6 +1,6 @@
 target:
   base:
-    url: ${TARGET_BASE_URL:http://localhost:8080}
+    url: ${TARGET_BASE_URL:http://localhost:3000}
 
 spring:
   application:
