@@ -15,13 +15,14 @@ import reactor.core.publisher.Mono;
 public class ProxyHandler {
 
     private final WebClient webClient;
-    private final String targetBaseUrl;
     private final RuleEngine ruleEngine;
 
+    @Value("${target.base.url}")
+    private String targetBaseUrl;
+
     public ProxyHandler(WebClient webClient,
-                        @Value("${TARGET_BASE_URL}") String targetBaseUrl, RuleEngine ruleEngine) {
+                        RuleEngine ruleEngine) {
         this.webClient = webClient;
-        this.targetBaseUrl = targetBaseUrl;
         this.ruleEngine = ruleEngine;
     }
 

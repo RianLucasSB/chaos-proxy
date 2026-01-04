@@ -13,8 +13,8 @@ public class RuleMatcher {
                 && matchesPath(rule.pathPattern(), request.path());
     }
 
-    private boolean matchesMethod(HttpMethod ruleMethod, HttpMethod requestMethod) {
-        return ruleMethod == null || ruleMethod.equals(requestMethod);
+    private boolean matchesMethod(String ruleMethod, HttpMethod requestMethod) {
+        return ruleMethod == null || ruleMethod.equals(requestMethod.name());
     }
 
     private boolean matchesPath(String pattern, String path) {

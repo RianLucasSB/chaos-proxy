@@ -1,10 +1,12 @@
 package com.caosproxy.rules;
 
 import com.caosproxy.utils.PathMatcher;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+@Component
 public class RuleEngine {
     private CopyOnWriteArrayList<ChaosRule> rules = new CopyOnWriteArrayList<>();
 
@@ -14,11 +16,15 @@ public class RuleEngine {
 
     public ChaosDecision evaluate(String path, String method) {
         for (ChaosRule rule : rules) {
-            if (rule.method().name().equalsIgnoreCase(method) && PathMatcher.match(rule.pathPattern(), path)) {
+            if (rule.method().equalsIgnoreCase(method) && PathMatcher.match(rule.pathPattern(), path)) {
                 return toDecision(rule.action());
             }
         }
         return ChaosDecision.passThrough();
+    }
+
+    public List<ChaosRule> getRules() {
+        return rules;
     }
 
     private ChaosDecision toDecision(ChaosAction action) {

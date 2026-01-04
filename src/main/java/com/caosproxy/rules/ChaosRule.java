@@ -1,11 +1,12 @@
 package com.caosproxy.rules;
 
-import org.springframework.http.HttpMethod;
+import lombok.Builder;
 
+@Builder
 public record ChaosRule(
         String id,
         String pathPattern,
-        HttpMethod method,
+        String method,
         double probability,
         ChaosAction action
 ) {}
