@@ -1,9 +1,9 @@
-package com.caosproxy.mapper;
+package com.chaosproxy.mapper;
 
-import com.caosproxy.api.dto.ChaosRuleRequest;
-import com.caosproxy.api.dto.ChaosRuleResponse;
-import com.caosproxy.rules.ChaosAction;
-import com.caosproxy.rules.ChaosRule;
+import com.chaosproxy.api.dto.ChaosRuleRequest;
+import com.chaosproxy.api.dto.ChaosRuleResponse;
+import com.chaosproxy.rules.ChaosAction;
+import com.chaosproxy.rules.ChaosRule;
 import lombok.experimental.UtilityClass;
 
 @UtilityClass

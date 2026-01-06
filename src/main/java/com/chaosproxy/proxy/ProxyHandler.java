@@ -1,7 +1,7 @@
-package com.caosproxy.proxy;
+package com.chaosproxy.proxy;
 
-import com.caosproxy.rules.ChaosDecision;
-import com.caosproxy.rules.RuleEngine;
+import com.chaosproxy.rules.ChaosDecision;
+import com.chaosproxy.rules.RuleEngine;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

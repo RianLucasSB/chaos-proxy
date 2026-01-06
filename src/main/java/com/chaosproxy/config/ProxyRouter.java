@@ -1,6 +1,6 @@
-package com.caosproxy.config;
+package com.chaosproxy.config;
 
-import com.caosproxy.proxy.ProxyHandler;
+import com.chaosproxy.proxy.ProxyHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.server.RequestPredicates;

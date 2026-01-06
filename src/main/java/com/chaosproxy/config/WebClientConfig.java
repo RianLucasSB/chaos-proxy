@@ -1,4 +1,4 @@
-package com.caosproxy.config;
+package com.chaosproxy.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

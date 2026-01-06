@@ -8,10 +8,10 @@
 		<version>4.0.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.caosproxy</groupId>
-	<artifactId>caosproxy</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>caosproxy</name>
+	<groupId>com.chaosproxy</groupId>
+	<artifactId>chaosproxy</artifactId>
+	<version>0.0.2-SNAPSHOT</version>
+	<name>chaosproxy</name>
 	<description>Reverse proxy for API testing</description>
 	<url/>
 	<licenses>

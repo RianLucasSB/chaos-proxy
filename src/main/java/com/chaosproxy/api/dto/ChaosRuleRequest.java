@@ -1,7 +1,7 @@
-package com.caosproxy.api.dto;
+package com.chaosproxy.api.dto;
 
-import com.caosproxy.rules.ActionMode;
-import com.caosproxy.rules.ActionType;
+import com.chaosproxy.rules.ActionMode;
+import com.chaosproxy.rules.ActionType;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;

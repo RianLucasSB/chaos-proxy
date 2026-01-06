@@ -1,6 +1,6 @@
-package com.caosproxy.rules;
+package com.chaosproxy.rules;
 
-import com.caosproxy.utils.PathMatcher;
+import com.chaosproxy.utils.PathMatcher;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;

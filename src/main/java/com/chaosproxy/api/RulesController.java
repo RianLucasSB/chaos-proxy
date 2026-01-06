@@ -1,11 +1,10 @@
-package com.caosproxy.api;
+package com.chaosproxy.api;
 
 
-import com.caosproxy.api.dto.ChaosRuleRequest;
-import com.caosproxy.api.dto.ChaosRuleResponse;
-import com.caosproxy.mapper.ChaosRuleMapper;
-import com.caosproxy.rules.ChaosRule;
-import com.caosproxy.rules.RuleEngine;
+import com.chaosproxy.api.dto.ChaosRuleRequest;
+import com.chaosproxy.api.dto.ChaosRuleResponse;
+import com.chaosproxy.mapper.ChaosRuleMapper;
+import com.chaosproxy.rules.RuleEngine;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

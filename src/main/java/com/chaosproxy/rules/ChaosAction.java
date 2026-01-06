@@ -1,4 +1,4 @@
-package com.caosproxy.rules;
+package com.chaosproxy.rules;
 
 public record ChaosAction(
     ActionType type,

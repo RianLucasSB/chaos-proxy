@@ -1,6 +1,6 @@
-package com.caosproxy.rules;
+package com.chaosproxy.rules;
 
-import com.caosproxy.utils.PathMatcher;
+import com.chaosproxy.utils.PathMatcher;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

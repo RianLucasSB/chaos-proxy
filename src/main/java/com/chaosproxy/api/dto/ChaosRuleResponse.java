@@ -1,4 +1,4 @@
-package com.caosproxy.api.dto;
+package com.chaosproxy.api.dto;
 
 
 import lombok.Builder;

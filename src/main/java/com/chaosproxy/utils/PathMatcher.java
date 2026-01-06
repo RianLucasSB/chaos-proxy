@@ -1,4 +1,4 @@
-package com.caosproxy.utils;
+package com.chaosproxy.utils;
 
 import org.springframework.util.AntPathMatcher;
 
