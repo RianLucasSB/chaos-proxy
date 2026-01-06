@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ThreadLocalRandom;
 
 @Component
 public class RuleEngine {
@@ -17,7 +18,7 @@ public class RuleEngine {
     public ChaosDecision evaluate(String path, String method) {
         for (ChaosRule rule : rules) {
             if (rule.method().equalsIgnoreCase(method) && PathMatcher.match(rule.pathPattern(), path)) {
-                return toDecision(rule.action());
+                return toDecision(rule.action(), rule.probability());
             }
         }
         return ChaosDecision.passThrough();
@@ -27,10 +28,16 @@ public class RuleEngine {
         return rules;
     }
 
-    private ChaosDecision toDecision(ChaosAction action) {
+    private ChaosDecision toDecision(ChaosAction action, double probability) {
+        double randomValue = ThreadLocalRandom.current().nextDouble();
+
+        if (randomValue >= probability) {
+            return ChaosDecision.passThrough();
+        }
 
         if (action.type() == ActionType.ERROR
-                && action.mode() == ActionMode.FORCED) {
+                && action.mode() == ActionMode.FORCED
+        ) {
 
             return ChaosDecision.forceError(
                     action.statusCode(),
